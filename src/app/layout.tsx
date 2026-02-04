@@ -5,16 +5,16 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 export const metadata: Metadata = {
-  title: 'Ahmad Salamah - Senior Frontend Developer',
+  title: 'Ahmad Salamh - Senior Frontend Developer',
   description: 'Senior Frontend Developer with 5+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript. Focused on SEO and Core Web Vitals.',
   keywords: 'Frontend Developer, JavaScript, React, Vue.js, Next.js, Nuxt.js, TypeScript, Shadcn UI, Tailwind CSS, Redux, Pinia, React Query, GraphQL, Vite, Webpack, PNPM, Web Development, UAE, Saudi Arabia, Europe',
-  authors: [{ name: 'Ahmad Salamah' }],
-  creator: 'Ahmad Salamah',
+  authors: [{ name: 'Ahmad Salamh' }],
+  creator: 'Ahmad Salamh',
   openGraph: {
-    title: 'Ahmad Salamah - Senior Frontend Developer',
+    title: 'Ahmad Salamh - Senior Frontend Developer',
     description: 'Senior Frontend Developer with 5+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.',
     url: 'https://ahmed-salameh.dev',
-    siteName: 'Ahmad Salamah Portfolio',
+    siteName: 'Ahmad Salamh Portfolio',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
         url: '/profile-pic.png',
         width: 800,
         height: 600,
-        alt: 'Ahmad Salamah - Senior Frontend Developer',
+        alt: 'Ahmad Salamh - Senior Frontend Developer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ahmad Salamah - Senior Frontend Developer',
+    title: 'Ahmad Salamh - Senior Frontend Developer',
     description: 'Senior Frontend Developer with 5+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.',
     images: ['/profile-pic.png'],
   },
@@ -71,7 +71,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Ahmad Salamah",
+              "name": "Ahmad Salamh",
               "jobTitle": "Senior Frontend Developer",
               "description": "Senior Frontend Developer with 5+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.",
               "url": "https://ahmed-salameh.dev",

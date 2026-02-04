@@ -115,16 +115,18 @@ const About = () => {
       <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="mb-12 text-center sm:mb-16">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.12 }}
             transition={{ duration: 0.6 }}
             className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl font-poppins"
           >
             About <span className="gradient-text">Me</span>
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.12 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mx-auto max-w-3xl text-xl text-gray-600"
           >
@@ -134,9 +136,9 @@ const About = () => {
 
         <div className="grid gap-8 items-start lg:grid-cols-12">
           <motion.aside
-            initial={{ opacity: 0, y: 14 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.12 }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-4 lg:sticky lg:top-24"
           >
@@ -144,7 +146,7 @@ const About = () => {
               <div className="relative p-6 bg-gradient-to-br from-primary-50 to-secondary-50">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <div className="text-xl font-bold text-gray-900 font-poppins">Ahmad Salamah</div>
+                    <div className="text-xl font-bold text-gray-900 font-poppins">Ahmad Salamh</div>
                     <div className="mt-1 text-sm text-gray-700">Senior Frontend Developer</div>
                   </div>
                   <div className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-gradient-to-r from-primary-500 to-secondary-500">
@@ -171,7 +173,7 @@ const About = () => {
                 >
                   <motion.div className="absolute inset-0 rounded-2xl opacity-70" style={{ background: glow }} />
                   <div className="relative overflow-hidden rounded-2xl shadow-lg border border-white/60" style={{ transform: 'translateZ(0px)' }}>
-                    <img src="/profile-pic.png" alt="Ahmad Salamah" className="object-contain w-full h-64" />
+                    <img src="/profile-pic.png" alt="Ahmad Salamh" className="object-contain w-full h-64" />
                     <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/10 to-secondary-500/10" />
                   </div>
                 </motion.div>
@@ -250,17 +252,17 @@ const About = () => {
           </motion.aside>
 
           <motion.div
-            initial={{ opacity: 0, y: 14 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.12 }}
             transition={{ duration: 0.6, delay: 0.05 }}
             className="space-y-6 lg:col-span-8"
           >
             <div ref={overviewRef} className="scroll-mt-28">
               <motion.div
-                initial={{ opacity: 0, y: 14 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.12 }}
                 transition={{ duration: 0.6 }}
                 className="p-7 bg-white rounded-3xl border border-gray-100 shadow-sm"
               >
@@ -314,9 +316,9 @@ const About = () => {
 
             <div ref={strengthsRef} className="scroll-mt-28">
               <motion.div
-                initial={{ opacity: 0, y: 14 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.12 }}
                 transition={{ duration: 0.6 }}
                 className="p-7 bg-white rounded-3xl border border-gray-100 shadow-sm"
               >
@@ -354,9 +356,9 @@ const About = () => {
 
             <div ref={impactRef} className="scroll-mt-28">
               <motion.div
-                initial={{ opacity: 0, y: 14 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.12 }}
                 transition={{ duration: 0.6 }}
                 className="p-7 bg-white rounded-3xl border border-gray-100 shadow-sm"
               >
@@ -413,9 +415,9 @@ const About = () => {
 
             <div ref={educationRef} className="scroll-mt-28">
               <motion.div
-                initial={{ opacity: 0, y: 14 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.12 }}
                 transition={{ duration: 0.6 }}
                 className="p-7 bg-white rounded-3xl border border-gray-100 shadow-sm"
               >
@@ -465,4 +467,3 @@ const About = () => {
 }
 
 export default About
-

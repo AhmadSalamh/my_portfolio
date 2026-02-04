@@ -206,10 +206,11 @@ const Contact = () => {
           </motion.div>
         )}
 
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.6 }}
             className="text-4xl sm:text-5xl font-bold font-poppins text-gray-900 mb-4"
           >
@@ -218,6 +219,7 @@ const Contact = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
@@ -230,12 +232,13 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Let's Start a Conversation</h3>
-              <p className="text-gray-600 leading-relaxed mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 md:mb-6">Let's Start a Conversation</h3>
+              <p className="text-gray-600 leading-relaxed mb-4 md:mb-8">
                 I'm always interested in new opportunities and exciting projects. Whether you're a
                 startup looking to build your first product or an established company wanting to
                 enhance your web presence, I'd love to hear from you.
@@ -249,6 +252,7 @@ const Contact = () => {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ scale: 1.02, x: 10 }}
                   href={info.href}
@@ -274,6 +278,7 @@ const Contact = () => {
                     key={index}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, amount: 0.15 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     whileHover={{ scale: 1.1, y: -2 }}
                     href={social.href}
@@ -291,6 +296,7 @@ const Contact = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-6"
             >
@@ -309,6 +315,7 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.8 }}
             className="bg-gray-50 rounded-2xl p-8"
           >
@@ -322,6 +329,7 @@ const Contact = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
                 >
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -349,6 +357,7 @@ const Contact = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -377,6 +386,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
               >
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
@@ -403,6 +413,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
@@ -430,6 +441,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
@@ -460,6 +472,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="text-center"
               >
@@ -494,6 +507,7 @@ const Contact = () => {
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               className="text-sm text-gray-500 text-center mt-4"
             >

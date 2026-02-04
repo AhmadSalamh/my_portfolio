@@ -84,7 +84,7 @@ export default function Home() {
                 <div className="absolute inset-3 rounded-full bg-white/10" />
               </div>
 
-              <div className="mt-6 text-xl font-bold text-white font-poppins">Ahmad Salamah</div>
+              <div className="mt-6 text-xl font-bold text-white font-poppins">Ahmad Salamh</div>
               <div className="mt-1 text-sm text-white/80">Loading portfolio</div>
 
               <div className="flex items-center gap-2 mt-5" aria-hidden="true">
@@ -122,7 +122,7 @@ export default function Home() {
           <About />
           <Skills />
           <Experience />
-          <Projects />
+          <Projects hidePaginationOnMobile />
           <Contact />
           <Footer />
         </motion.main>

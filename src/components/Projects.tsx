@@ -5,7 +5,11 @@ import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-const Projects = () => {
+type ProjectsProps = {
+  hidePaginationOnMobile?: boolean
+}
+
+const Projects = ({ hidePaginationOnMobile = false }: ProjectsProps) => {
   const projects = [
     {
       title: 'LoopChat',
@@ -281,7 +285,7 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className="relative py-6">
+          <div className="relative pt-6">
             <div className="hidden absolute left-0 top-1/2 z-10 -translate-y-1/2 md:flex">
               <motion.button
                 type="button"
@@ -324,7 +328,12 @@ const Projects = () => {
                 768: { slidesPerView: 2 },
                 1024: { slidesPerView: 3.4 }
               }}
-              className="px-4 pb-10 -mx-4"
+              className={[
+                'px-4 pb-10 -mx-4',
+                hidePaginationOnMobile ? '[&_.swiper-pagination]:hidden md:[&_.swiper-pagination]:block' : null
+              ]
+                .filter(Boolean)
+                .join(' ')}
             >
               {otherProjects.map((project, index) => {
                 const isDemoAvailable = Boolean(project.demo && project.demo !== '#')
@@ -420,9 +429,9 @@ const Projects = () => {
           initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-16 text-center"
+          className="mt-8 text-center"
         >
-          <div className="p-8 text-white bg-gradient-to-r rounded-2xl from-primary-500 to-secondary-500">
+          <div className="p-4 md:p-8 text-white bg-gradient-to-r rounded-2xl from-primary-500 to-secondary-500">
             <h3 className="mb-4 text-2xl font-bold">Interested in Working Together?</h3>
             <p className="mb-6 text-lg opacity-90">
               Let's discuss your next project and bring your ideas to life

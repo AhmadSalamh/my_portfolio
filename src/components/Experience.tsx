@@ -110,7 +110,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-10 bg-white">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="mb-16 text-center">
+        <div className="mb-8 md:mb-16 text-center">
           <motion.h2
             initial={false}
             whileInView={{ opacity: 1, y: 0 }}

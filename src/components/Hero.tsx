@@ -114,7 +114,7 @@ const Hero = () => {
             <div className="relative">
               <img
                 src="/profile-pic.png"
-                alt="Ahmad Salamah"
+                alt="Ahmad Salamh"
                 className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-white/20 shadow-2xl object-cover"
               />
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-500/20 to-secondary-500/20"></div>
@@ -124,9 +124,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold font-poppins leading-tight"
+            className="text-3xl sm:text-4xl lg:text-7xl font-bold font-poppins leading-tight"
           >
-            <span className="text-accent-400">Ahmad Salamah</span>
+            <span className="text-accent-400">Ahmad Salamh</span>
           </motion.h1>
 
           <motion.div
