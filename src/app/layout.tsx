@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ahmad Salamh - Senior Frontend Developer',
     description: 'Senior Frontend Developer with 5+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.',
-    url: 'https://ahmed-salameh.dev',
+    url: 'https://ahmed-Salamh.dev',
     siteName: 'Ahmad Salamh Portfolio',
     locale: 'en_US',
     type: 'website',
@@ -74,7 +74,7 @@ export default function RootLayout({
               "name": "Ahmad Salamh",
               "jobTitle": "Senior Frontend Developer",
               "description": "Senior Frontend Developer with 5+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.",
-              "url": "https://ahmed-salameh.dev",
+              "url": "https://ahmed-Salamh.dev",
               "sameAs": [
                 "https://github.com/AhmadSalamh",
                 "https://www.linkedin.com/in/ahmed-salamh"

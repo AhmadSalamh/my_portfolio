@@ -159,7 +159,7 @@ const Navigation = () => {
             >
               <div className="flex items-center justify-between px-5 pt-6 pb-4 border-b border-gray-100">
                 <div className="text-lg font-bold font-poppins text-gray-900">
-                  Ahmed <span className="gradient-text">Salameh</span>
+                  Ahmed <span className="gradient-text">Salamh</span>
                 </div>
                 <motion.button
                   type="button"

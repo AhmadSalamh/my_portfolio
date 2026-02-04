@@ -1,6 +1,6 @@
-# Ahmed Salameh - Portfolio Website
+# Ahmad Salamh - Portfolio Website
 
-A modern, responsive portfolio website built with Next.js, TypeScript, and Framer Motion to showcase Ahmed Salameh's skills and experience as a Senior Frontend Developer.
+A modern, responsive portfolio website built with Next.js, TypeScript, and Framer Motion to showcase Ahmad Salamh's skills and experience as a Senior Frontend Developer.
 
 ## 🚀 Features
 
@@ -156,7 +156,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 📞 Contact
 
-Ahmed Salameh - [ahmad.m.salamh@gmail.com](mailto:ahmad.m.salamh@gmail.com)
+Ahmad Salamh - [ahmad.m.salamh@gmail.com](mailto:ahmad.m.salamh@gmail.com)
 
 Project Link: [https://github.com/AhmadSalamh/portfolio](https://github.com/AhmadSalamh/portfolio)
 

@@ -70,7 +70,7 @@ const Footer = () => {
             className="space-y-4"
           >
             <h3 className="text-2xl font-bold font-poppins">
-              Ahmed <span className="text-primary-400">Salameh</span>
+              Ahmed <span className="text-primary-400">Salamh</span>
             </h3>
             <p className="leading-relaxed text-gray-400">
               Senior Frontend Developer with 5+ years building high‑performance, scalable web apps
@@ -170,7 +170,7 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               className="flex gap-2 items-center text-sm text-gray-400"
             >
-              © {currentYear} Ahmed Salameh. Made with
+              © {currentYear} Ahmad Salamh. Made with
               <Heart size={14} className="text-red-500 animate-pulse" />
               and lots of coffee.
             </motion.p>

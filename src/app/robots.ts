@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://ahmed-salameh.dev/sitemap.xml',
+    sitemap: 'https://ahmed-Salamh.dev/sitemap.xml',
   }
 }
 
