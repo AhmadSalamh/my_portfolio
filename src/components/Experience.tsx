@@ -108,14 +108,14 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="py-10 bg-white">
+    <section id="experience" className="py-6 bg-white md:py-10">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="mb-8 md:mb-16 text-center">
+        <div className="mb-8 text-center md:mb-16">
           <motion.h2
             initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl font-poppins"
+            className="mb-2 text-3xl font-bold text-gray-900 sm:text-5xl font-poppins"
           >
             Work <span className="gradient-text">Experience</span>
           </motion.h2>
@@ -123,7 +123,7 @@ const Experience = () => {
             initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mx-auto max-w-3xl text-xl text-gray-600"
+            className="mx-auto max-w-3xl text-lg text-gray-600 md:text-xl"
           >
             5+ years of professional experience building scalable web applications for international clients
           </motion.p>
@@ -175,7 +175,7 @@ const Experience = () => {
                 className="overflow-hidden relative bg-white rounded-2xl border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl"
               >
                 <div className={`absolute inset-y-0 left-0 w-1 bg-gradient-to-b ${exp.color}`} />
-                <div className="p-6">
+                <div className="p-4 md:p-6">
                   <div className="flex flex-wrap gap-4 justify-between items-start">
                     <div>
                       <div className="flex gap-2 items-center">

@@ -174,8 +174,8 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-10 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-6 bg-white md:py-10">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Notification */}
         {notification.type && (
           <motion.div
@@ -187,7 +187,7 @@ const Contact = () => {
               : 'bg-red-50 border-red-200 text-red-800'
               }`}
           >
-            <div className="flex items-start gap-3">
+            <div className="flex gap-3 items-start">
               {notification.type === 'success' ? (
                 <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
               ) : (
@@ -198,7 +198,7 @@ const Contact = () => {
               </div>
               <button
                 onClick={() => setNotification({ type: null, message: '' })}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-gray-400 transition-colors hover:text-gray-600"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -206,13 +206,13 @@ const Contact = () => {
           </motion.div>
         )}
 
-        <div className="text-center mb-8 md:mb-16">
+        <div className="mb-8 text-center md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl font-bold font-poppins text-gray-900 mb-4"
+            className="mb-2 text-3xl font-bold text-gray-900 sm:text-5xl font-poppins"
           >
             Get In <span className="gradient-text">Touch</span>
           </motion.h2>
@@ -221,13 +221,13 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="mx-auto max-w-3xl text-lg text-gray-600 md:text-xl"
           >
             Ready to start your next project? Let's discuss how I can help bring your ideas to life
           </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid gap-6 lg:grid-cols-2 md:gap-12">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -237,8 +237,8 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3 md:mb-6">Let's Start a Conversation</h3>
-              <p className="text-gray-600 leading-relaxed mb-4 md:mb-8">
+              <h3 className="mb-3 text-2xl font-bold text-gray-900 md:mb-6">Let's Start a Conversation</h3>
+              <p className="mb-4 leading-relaxed text-gray-600 md:mb-8">
                 I'm always interested in new opportunities and exciting projects. Whether you're a
                 startup looking to build your first product or an established company wanting to
                 enhance your web presence, I'd love to hear from you.
@@ -256,7 +256,7 @@ const Contact = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ scale: 1.02, x: 10 }}
                   href={info.href}
-                  className="flex items-center p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-all duration-300 group"
+                  className="flex items-center p-4 bg-gray-50 rounded-xl transition-all duration-300 hover:bg-gray-100 group"
                 >
                   <div className={`p-3 bg-gradient-to-r ${info.color} rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300`}>
                     <info.icon className="w-6 h-6 text-white" />
@@ -270,8 +270,8 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="pt-8">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Follow Me</h4>
+            <div className="md:pt-8">
+              <h4 className="mb-4 text-lg font-semibold text-gray-900">Follow Me</h4>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -298,13 +298,13 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-6"
+              className="p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200"
             >
               <div className="flex items-center mb-3">
-                <div className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse"></div>
+                <div className="mr-3 w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                 <h4 className="font-semibold text-green-800">Currently Available</h4>
               </div>
-              <p className="text-green-700 text-sm">
+              <p className="text-sm text-green-700">
                 I'm currently accepting new projects and would love to discuss your requirements.
                 Typical response time is within 24 hours.
               </p>
@@ -317,22 +317,22 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.8 }}
-            className="bg-gray-50 rounded-2xl p-8"
+            className="p-6 bg-gray-50 rounded-2xl md:p-8"
           >
             <div className="flex items-center mb-6">
-              <MessageCircle className="w-6 h-6 text-primary-500 mr-3" />
+              <MessageCircle className="mr-3 w-6 h-6 text-primary-500" />
               <h3 className="text-xl font-bold text-gray-900">Send a Message</h3>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid gap-6 md:grid-cols-2">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.15 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
                 >
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-700">
                     Full Name *
                   </label>
                   <input
@@ -347,7 +347,7 @@ const Contact = () => {
                     placeholder="Your full name"
                   />
                   {errors.name && (
-                    <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                    <p className="flex gap-1 items-center mt-1 text-sm text-red-600">
                       <AlertCircle className="w-4 h-4" />
                       {errors.name}
                     </p>
@@ -360,7 +360,7 @@ const Contact = () => {
                   viewport={{ once: true, amount: 0.15 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-700">
                     Email Address *
                   </label>
                   <input
@@ -375,7 +375,7 @@ const Contact = () => {
                     placeholder="your.email@example.com"
                   />
                   {errors.email && (
-                    <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                    <p className="flex gap-1 items-center mt-1 text-sm text-red-600">
                       <AlertCircle className="w-4 h-4" />
                       {errors.email}
                     </p>
@@ -389,7 +389,7 @@ const Contact = () => {
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
               >
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-700">
                   Phone Number (Optional)
                 </label>
                 <input
@@ -403,7 +403,7 @@ const Contact = () => {
                   placeholder="+1 (555) 123-4567"
                 />
                 {errors.phone && (
-                  <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                  <p className="flex gap-1 items-center mt-1 text-sm text-red-600">
                     <AlertCircle className="w-4 h-4" />
                     {errors.phone}
                   </p>
@@ -416,7 +416,7 @@ const Contact = () => {
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-700">
                   Subject *
                 </label>
                 <input
@@ -431,7 +431,7 @@ const Contact = () => {
                   placeholder="Project inquiry, collaboration, etc."
                 />
                 {errors.subject && (
-                  <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                  <p className="flex gap-1 items-center mt-1 text-sm text-red-600">
                     <AlertCircle className="w-4 h-4" />
                     {errors.subject}
                   </p>
@@ -444,7 +444,7 @@ const Contact = () => {
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-700">
                   Message *
                 </label>
                 <textarea
@@ -459,12 +459,12 @@ const Contact = () => {
                   placeholder="Tell me about your project, timeline, and requirements..."
                 />
                 {errors.message && (
-                  <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                  <p className="flex gap-1 items-center mt-1 text-sm text-red-600">
                     <AlertCircle className="w-4 h-4" />
                     {errors.message}
                   </p>
                 )}
-                <div className="mt-1 text-xs text-gray-500 text-right">
+                <div className="mt-1 text-xs text-right text-gray-500">
                   {formData.message.length}/1000 characters
                 </div>
               </motion.div>
@@ -480,13 +480,13 @@ const Contact = () => {
                   type="submit"
                   disabled={isSubmitting}
                   className={`inline-flex items-center gap-2 px-8 py-4 rounded-lg font-medium transition-all duration-200 transform focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 ${isSubmitting
-                    ? 'bg-gray-400 text-white cursor-not-allowed'
-                    : 'bg-primary-600 text-white hover:bg-primary-700 hover:scale-105'
+                    ? 'text-white bg-gray-400 cursor-not-allowed'
+                    : 'text-white bg-primary-600 hover:bg-primary-700 hover:scale-105'
                     }`}
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      <div className="w-5 h-5 rounded-full border-2 border-white animate-spin border-t-transparent" />
                       Sending...
                     </>
                   ) : (
@@ -509,7 +509,7 @@ const Contact = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-sm text-gray-500 text-center mt-4"
+              className="mt-4 text-sm text-center text-gray-500"
             >
               I'll get back to you within 24 hours. Looking forward to hearing from you!
             </motion.p>

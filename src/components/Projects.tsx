@@ -154,14 +154,14 @@ const Projects = ({ hidePaginationOnMobile = false }: ProjectsProps) => {
   const otherProjects = projects.filter((project) => !project.featured)
 
   return (
-    <section id="projects" className="py-10 bg-gray-50">
+    <section id="projects" className="py-6 bg-gray-50 md:py-10">
       <div className="px-4 sm:px-6 lg:px-8">
-        <div className="mb-14 text-center">
+        <div className="mb-8 text-center md:mb-14">
           <motion.h2
             initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl font-poppins"
+            className="mb-2 text-3xl font-bold text-gray-900 sm:text-5xl font-poppins"
           >
             Featured <span className="gradient-text">Projects</span>
           </motion.h2>
@@ -169,7 +169,7 @@ const Projects = ({ hidePaginationOnMobile = false }: ProjectsProps) => {
             initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mx-auto max-w-3xl text-xl text-gray-600"
+            className="mx-auto max-w-3xl text-lg md:text-xl text-gray-600"
           >
             Showcase of successful projects across various industries and technologies
           </motion.p>
@@ -188,7 +188,7 @@ const Projects = ({ hidePaginationOnMobile = false }: ProjectsProps) => {
               >
                 <div className={`relative h-60 bg-gradient-to-br ${project.color}`}>
                   <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.45),transparent_55%),radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.35),transparent_50%)]" />
-                  <div className="flex absolute inset-0 justify-center items-center p-10">
+                  <div className="flex absolute inset-0 justify-center items-center p-6 md:p-10">
                     {project.image ? (
                       <div className="p-8 w-full h-full rounded-2xl border shadow-sm backdrop-blur-sm bg-white/75 border-white/40">
                         <img
@@ -431,7 +431,7 @@ const Projects = ({ hidePaginationOnMobile = false }: ProjectsProps) => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-8 text-center"
         >
-          <div className="p-4 md:p-8 text-white bg-gradient-to-r rounded-2xl from-primary-500 to-secondary-500">
+          <div className="p-4 text-white bg-gradient-to-r rounded-2xl md:p-8 from-primary-500 to-secondary-500">
             <h3 className="mb-4 text-2xl font-bold">Interested in Working Together?</h3>
             <p className="mb-6 text-lg opacity-90">
               Let's discuss your next project and bring your ideas to life
