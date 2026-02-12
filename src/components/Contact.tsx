@@ -298,7 +298,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200"
+              className="p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200 md:p-6"
             >
               <div className="flex items-center mb-3">
                 <div className="mr-3 w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
@@ -317,7 +317,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.8 }}
-            className="p-6 bg-gray-50 rounded-2xl md:p-8"
+            className="p-4 bg-gray-50 rounded-2xl md:p-8"
           >
             <div className="flex items-center mb-6">
               <MessageCircle className="mr-3 w-6 h-6 text-primary-500" />

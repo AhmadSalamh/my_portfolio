@@ -434,7 +434,7 @@ const Projects = ({ hidePaginationOnMobile = false }: ProjectsProps) => {
           initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-8 text-center"
+          className="text-center md:mt-8"
         >
           <div className="p-4 text-white bg-gradient-to-r rounded-2xl md:p-8 from-primary-500 to-secondary-500">
             <h3 className="mb-4 text-2xl font-bold">Interested in Working Together?</h3>
