@@ -136,7 +136,7 @@ const Experience = () => {
             transition={{ duration: 0.6 }}
             className="lg:sticky lg:top-24 h-fit"
           >
-            <div className="p-6 bg-gradient-to-br rounded-2xl border border-gray-100 shadow-sm from-primary-50 to-secondary-50">
+            <div className="p-4 bg-gradient-to-br rounded-2xl border border-gray-100 shadow-sm md:p-6 from-primary-50 to-secondary-50">
               <h3 className="mb-4 text-xl font-bold text-gray-900">Career Highlights</h3>
               <div className="grid grid-cols-2 gap-4">
                 {[

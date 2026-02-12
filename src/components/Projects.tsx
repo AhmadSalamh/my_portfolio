@@ -189,7 +189,7 @@ const Projects = ({ hidePaginationOnMobile = false }: ProjectsProps) => {
               >
                 <div className={`relative h-60 bg-gradient-to-br ${project.color}`}>
                   <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.45),transparent_55%),radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.35),transparent_50%)]" />
-                  <div className="flex absolute inset-0 justify-center items-center p-6 md:p-10">
+                  <div className="flex absolute inset-0 justify-center items-center p-4 md:p-10">
                     {project.image ? (
                       <div className="relative w-full h-full rounded-2xl border shadow-sm backdrop-blur-sm bg-white/75 border-white/40">
                         <Image
@@ -210,7 +210,7 @@ const Projects = ({ hidePaginationOnMobile = false }: ProjectsProps) => {
                   </div>
                 </div>
 
-                <div className="p-7">
+                <div className="p-4 md:p-7">
                   <div className="flex flex-wrap gap-2 justify-between items-center mb-4">
                     <h3 className="text-2xl font-bold tracking-tight text-gray-900">{project.title}</h3>
                     <span className="px-3 py-1 text-xs font-semibold tracking-wide text-gray-700 uppercase rounded-full border border-gray-200 bg-white/70">
@@ -332,7 +332,7 @@ const Projects = ({ hidePaginationOnMobile = false }: ProjectsProps) => {
                 1024: { slidesPerView: 3.4 }
               }}
               className={[
-                'px-4 pb-10 -mx-4',
+                'px-4 pb-6 -mx-4',
                 hidePaginationOnMobile ? '[&_.swiper-pagination]:hidden md:[&_.swiper-pagination]:block' : null
               ]
                 .filter(Boolean)

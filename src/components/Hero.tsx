@@ -116,19 +116,19 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="flex overflow-hidden relative justify-center items-center min-h-screen">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 z-0"
         style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}
       />
 
-      <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      <div className="relative z-10 px-4 mx-auto max-w-4xl text-center text-white sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6"
+          className="space-y-2 md:space-y-6"
         >
           {/* Profile Image */}
           <motion.div
@@ -144,16 +144,16 @@ const Hero = () => {
                 width={160}
                 height={160}
                 priority
-                className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-white/20 shadow-2xl object-cover"
+                className="object-cover w-32 h-32 rounded-full border-4 shadow-2xl sm:w-40 sm:h-40 border-white/20"
               />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-500/20 to-secondary-500/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr rounded-full from-primary-500/20 to-secondary-500/20"></div>
             </div>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-3xl sm:text-4xl lg:text-7xl font-bold font-poppins leading-tight"
+            className="text-3xl font-bold leading-tight sm:text-4xl lg:text-7xl font-poppins"
           >
             <span className="text-accent-400">Ahmad Salamh</span>
           </motion.h1>
@@ -162,7 +162,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl sm:text-2xl lg:text-3xl font-light"
+            className="text-xl font-light sm:text-2xl lg:text-3xl"
           >
             <span className="typing-text">Senior Frontend Developer</span>
           </motion.div>
@@ -171,7 +171,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed"
+            className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-200 sm:text-xl"
           >
             Building scalable web applications with modern technologies. Specialized in JavaScript, React.js, Vue.js with 6+ years of proven experience.
           </motion.p>
@@ -180,13 +180,13 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-300"
+            className="flex flex-wrap gap-6 justify-center items-center text-sm text-gray-300"
           >
-            <div className="flex items-center gap-2">
+            <div className="flex gap-2 items-center">
               <MapPin size={16} />
               <span>Syria, Latakia</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex gap-2 items-center">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
               <span>Available for opportunities</span>
             </div>
@@ -196,13 +196,13 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="flex flex-wrap justify-center gap-4 pt-8"
+            className="flex flex-wrap gap-4 justify-center pt-8"
           >
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToAbout}
-              className="bg-white text-primary-700 px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="px-8 py-3 font-semibold bg-white rounded-full shadow-lg transition-all duration-300 text-primary-700 hover:shadow-xl"
             >
               View My Work
             </motion.button>
@@ -211,7 +211,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               href="mailto:ahmad.m.salamh@gmail.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary-700 transition-all duration-300"
+              className="px-8 py-3 font-semibold text-white rounded-full border-2 border-white transition-all duration-300 hover:bg-white hover:text-primary-700"
             >
               Get In Touch
             </motion.a>
@@ -221,7 +221,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="flex justify-center gap-6 pt-8"
+            className="flex gap-6 justify-center pt-8"
           >
             <motion.a
               whileHover={{ scale: 1.2, y: -2 }}
@@ -229,7 +229,7 @@ const Hero = () => {
               href="https://github.com/AhmadSalamh"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300"
+              className="p-3 rounded-full backdrop-blur-sm transition-all duration-300 bg-white/10 hover:bg-white/20"
             >
               <Github size={24} />
             </motion.a>
@@ -240,7 +240,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/Ahmad-salamh"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300"
+              className="p-3 rounded-full backdrop-blur-sm transition-all duration-300 bg-white/10 hover:bg-white/20"
             >
               <Linkedin size={24} />
             </motion.a>
@@ -249,7 +249,7 @@ const Hero = () => {
               whileHover={{ scale: 1.2, y: -2 }}
               whileTap={{ scale: 0.9 }}
               href="mailto:ahmad.m.salamh@gmail.com"
-              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300"
+              className="p-3 rounded-full backdrop-blur-sm transition-all duration-300 bg-white/10 hover:bg-white/20"
             >
               <Mail size={24} />
             </motion.a>
@@ -261,7 +261,7 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
-              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300"
+              className="p-3 rounded-full backdrop-blur-sm transition-all duration-300 bg-white/10 hover:bg-white/20"
             >
               <WhatsAppIcon size={24} />
             </motion.a>
@@ -278,7 +278,7 @@ const Hero = () => {
             onClick={scrollToAbout}
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="p-2 text-white/70 hover:text-white transition-colors duration-300"
+            className="p-2 transition-colors duration-300 text-white/70 hover:text-white"
           >
             <ArrowDown size={24} />
           </motion.button>
