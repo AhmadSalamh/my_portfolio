@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://ahmed-Salamh.dev/sitemap.xml',
+    sitemap: 'https://my-portfolio-wx43.vercel.app/sitemap.xml',
   }
 }
 

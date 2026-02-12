@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ahmad Salamh - Senior Frontend Developer',
     description: 'Senior Frontend Developer with 5+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.',
-    url: 'https://ahmed-Salamh.dev',
+    url: 'https://my-portfolio-wx43.vercel.app/',
     siteName: 'Ahmad Salamh Portfolio',
     locale: 'en_US',
     type: 'website',
@@ -56,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/profile-pic.png" />
         <link rel="apple-touch-icon" href="/profile-pic.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#6366f1" />
@@ -74,10 +74,10 @@ export default function RootLayout({
               "name": "Ahmad Salamh",
               "jobTitle": "Senior Frontend Developer",
               "description": "Senior Frontend Developer with 5+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.",
-              "url": "https://ahmed-Salamh.dev",
+              "url": "https://my-portfolio-wx43.vercel.app/",
               "sameAs": [
                 "https://github.com/AhmadSalamh",
-                "https://www.linkedin.com/in/ahmed-salamh"
+                "https://www.linkedin.com/in/Ahmad-salamh"
               ],
               "address": {
                 "@type": "PostalAddress",

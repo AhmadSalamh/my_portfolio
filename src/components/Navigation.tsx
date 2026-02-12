@@ -80,7 +80,7 @@ const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold font-poppins"
           >
-            <span className="gradient-text">Ahmed</span>
+            <span className="gradient-text">Ahmad</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -159,7 +159,7 @@ const Navigation = () => {
             >
               <div className="flex items-center justify-between px-5 pt-6 pb-4 border-b border-gray-100">
                 <div className="text-lg font-bold font-poppins text-gray-900">
-                  Ahmed <span className="gradient-text">Salamh</span>
+                  Ahmad <span className="gradient-text">Salamh</span>
                 </div>
                 <motion.button
                   type="button"

@@ -156,7 +156,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/ahmed-salamh',
+      href: 'https://www.linkedin.com/in/Ahmad-salamh',
       color: 'hover:text-blue-600'
     },
     {

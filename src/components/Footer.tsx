@@ -33,7 +33,7 @@ const Footer = () => {
     },
     {
       icon: Linkedin,
-      href: 'https://www.linkedin.com/in/ahmed-salamh',
+      href: 'https://www.linkedin.com/in/Ahmad-salamh',
       label: 'LinkedIn'
     },
     {
@@ -70,7 +70,7 @@ const Footer = () => {
             className="space-y-4"
           >
             <h3 className="text-2xl font-bold font-poppins">
-              Ahmed <span className="text-primary-400">Salamh</span>
+              Ahmad <span className="text-primary-400">Salamh</span>
             </h3>
             <p className="leading-relaxed text-gray-400">
               Senior Frontend Developer with 5+ years building high‑performance, scalable web apps

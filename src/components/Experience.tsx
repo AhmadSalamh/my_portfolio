@@ -26,7 +26,7 @@ const Experience = () => {
       title: 'Senior Frontend Developer',
       company: 'Keytime Company',
       location: 'Remote, Saudi Arabia',
-      period: 'July 2024 - Present',
+      period: 'July 2024 - Jan 2026',
       type: 'Full-time',
       description: 'Leading development of LoopChat, an enterprise customer messaging platform serving 1000+ concurrent users.',
       achievements: [
