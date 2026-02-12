@@ -170,7 +170,7 @@ const Projects = ({ hidePaginationOnMobile = false }: ProjectsProps) => {
             initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mx-auto max-w-3xl text-lg md:text-xl text-gray-600"
+            className="mx-auto max-w-3xl text-lg text-gray-600 md:text-xl"
           >
             Showcase of successful projects across various industries and technologies
           </motion.p>
@@ -400,7 +400,7 @@ const Projects = ({ hidePaginationOnMobile = false }: ProjectsProps) => {
                             )}
                           </div>
 
-                          <div className="mt-auto">
+                          <div className="">
                             {isDemoAvailable ? (
                               <motion.a
                                 whileHover={{ scale: 1.02 }}
