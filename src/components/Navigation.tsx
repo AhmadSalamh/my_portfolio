@@ -33,6 +33,20 @@ const Navigation = () => {
     }
   }, [isOpen])
 
+  useEffect(() => {
+    // Handle initial hash scroll
+    if (window.location.hash) {
+      const hash = window.location.hash
+      // Small timeout to ensure elements are rendered and layout is settled
+      setTimeout(() => {
+        const element = document.querySelector(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 500)
+    }
+  }, [])
+
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
@@ -70,11 +84,11 @@ const Navigation = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? 'bg-white/90 backdrop-blur-md shadow-lg'
+        ? 'shadow-lg backdrop-blur-md bg-white/90'
         : 'bg-transparent'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -84,7 +98,7 @@ const Navigation = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden items-center space-x-8 md:flex">
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
@@ -102,7 +116,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button and Controls */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="flex items-center space-x-2 md:hidden">
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
@@ -157,8 +171,8 @@ const Navigation = () => {
               transition={{ type: 'spring', stiffness: 280, damping: 28 }}
               className="absolute top-0 right-0 h-svh w-[86%] max-w-sm bg-white shadow-2xl"
             >
-              <div className="flex items-center justify-between px-5 pt-6 pb-4 border-b border-gray-100">
-                <div className="text-lg font-bold font-poppins text-gray-900">
+              <div className="flex justify-between items-center px-5 pt-6 pb-4 border-b border-gray-100">
+                <div className="text-lg font-bold text-gray-900 font-poppins">
                   Ahmad <span className="gradient-text">Salamh</span>
                 </div>
                 <motion.button
@@ -166,7 +180,7 @@ const Navigation = () => {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setIsOpen(false)}
                   aria-label="Close menu"
-                  className="p-2 text-gray-700 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-200"
+                  className="p-2 text-gray-700 bg-gray-50 rounded-xl transition-colors duration-200 hover:bg-gray-100"
                 >
                   <X size={20} />
                 </motion.button>
@@ -191,7 +205,7 @@ const Navigation = () => {
                       variants={itemVariants}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => scrollToSection(item.href)}
-                      className="flex items-center justify-between w-full px-4 py-3 text-left rounded-2xl bg-gray-50 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 transition-colors duration-200"
+                      className="flex justify-between items-center px-4 py-3 w-full text-left bg-gray-50 rounded-2xl transition-colors duration-200 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50"
                     >
                       <span className="text-base font-semibold text-gray-900">{item.name}</span>
                       <motion.span
@@ -206,7 +220,7 @@ const Navigation = () => {
                   ))}
                 </motion.div>
 
-                <div className="mt-8 p-5 rounded-3xl bg-gradient-to-br from-primary-50 to-secondary-50 border border-gray-100">
+                <div className="p-5 mt-8 bg-gradient-to-br rounded-3xl border border-gray-100 from-primary-50 to-secondary-50">
                   <div className="text-sm font-semibold text-gray-900">Available for opportunities</div>
                   <div className="mt-1 text-sm text-gray-700">Let’s talk about your next project.</div>
                   <motion.a
@@ -214,7 +228,7 @@ const Navigation = () => {
                     whileTap={{ scale: 0.98 }}
                     href="#contact"
                     onClick={() => setIsOpen(false)}
-                    className="mt-4 inline-flex items-center justify-center w-full px-4 py-3 text-sm font-semibold text-white rounded-2xl bg-gradient-to-r from-primary-500 to-secondary-500 shadow-sm hover:shadow-md transition-all duration-300"
+                    className="inline-flex justify-center items-center px-4 py-3 mt-4 w-full text-sm font-semibold text-white bg-gradient-to-r rounded-2xl shadow-sm transition-all duration-300 from-primary-500 to-secondary-500 hover:shadow-md"
                   >
                     Contact me
                   </motion.a>
