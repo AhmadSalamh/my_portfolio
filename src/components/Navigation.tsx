@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react'
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('#home')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +15,27 @@ const Navigation = () => {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-50% 0px -50% 0px',
+      threshold: 0
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(`#${entry.target.id}`)
+        }
+      })
+    }, observerOptions)
+
+    const sections = document.querySelectorAll('section[id]')
+    sections.forEach((section) => observer.observe(section))
+
+    return () => observer.disconnect()
   }, [])
 
   useEffect(() => {
@@ -99,20 +121,31 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden items-center space-x-8 md:flex">
-            {navItems.map((item) => (
-              <motion.button
-                key={item.name}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection(item.href)}
-                className={`text-sm font-medium transition-colors duration-200 ${scrolled
-                  ? 'text-gray-700 hover:text-primary-600'
-                  : 'text-white hover:text-primary-200'
-                  }`}
-              >
-                {item.name}
-              </motion.button>
-            ))}
+            {navItems.map((item) => {
+              const isActive = activeSection === item.href
+              return (
+                <motion.button
+                  key={item.name}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => scrollToSection(item.href)}
+                  className={`text-sm font-medium transition-all duration-200 relative ${scrolled
+                    ? isActive ? 'font-bold text-primary-600' : 'text-gray-700 hover:text-primary-600'
+                    : isActive ? 'font-bold text-white' : 'text-white/80 hover:text-white'
+                    }`}
+                >
+                  {item.name}
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeSection"
+                      className={`absolute -bottom-1 left-0 right-0 h-0.5 rounded-full ${scrolled ? 'bg-gradient-to-r from-primary-500 to-secondary-500' : 'bg-white'
+                        }`}
+                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </motion.button>
+              )
+            })}
           </div>
 
           {/* Mobile Menu Button and Controls */}
@@ -199,25 +232,33 @@ const Navigation = () => {
                   animate="visible"
                   className="space-y-2"
                 >
-                  {navItems.map((item) => (
-                    <motion.button
-                      key={item.name}
-                      variants={itemVariants}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={() => scrollToSection(item.href)}
-                      className="flex justify-between items-center px-4 py-3 w-full text-left bg-gray-50 rounded-2xl transition-colors duration-200 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50"
-                    >
-                      <span className="text-base font-semibold text-gray-900">{item.name}</span>
-                      <motion.span
-                        aria-hidden="true"
-                        initial={false}
-                        whileHover={{ x: 2 }}
-                        className="text-sm font-semibold text-primary-600"
+                  {navItems.map((item) => {
+                    const isActive = activeSection === item.href
+                    return (
+                      <motion.button
+                        key={item.name}
+                        variants={itemVariants}
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => scrollToSection(item.href)}
+                        className={`flex justify-between items-center px-4 py-3 w-full text-left rounded-2xl transition-colors duration-200 ${isActive
+                          ? 'bg-gradient-to-r from-primary-50 to-secondary-50 text-primary-700'
+                          : 'text-gray-900 bg-gray-50 hover:bg-gray-100'
+                          }`}
                       >
-                        ↗
-                      </motion.span>
-                    </motion.button>
-                  ))}
+                        <span className={`text-base ${isActive ? 'font-bold' : 'font-semibold'}`}>
+                          {item.name}
+                        </span>
+                        <motion.span
+                          aria-hidden="true"
+                          initial={false}
+                          whileHover={{ x: 2 }}
+                          className={`text-sm font-semibold ${isActive ? 'text-primary-600' : 'text-gray-400'}`}
+                        >
+                          {isActive ? '●' : '↗'}
+                        </motion.span>
+                      </motion.button>
+                    )
+                  })}
                 </motion.div>
 
                 <div className="p-5 mt-8 bg-gradient-to-br rounded-3xl border border-gray-100 from-primary-50 to-secondary-50">
