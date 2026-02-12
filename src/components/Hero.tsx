@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowDown, Github, Linkedin, Mail, MapPin } from 'lucide-react'
+import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 
 const WhatsAppIcon = ({ size = 24, className }: { size?: number; className?: string }) => {
@@ -112,9 +113,12 @@ const Hero = () => {
             className="flex justify-center mb-8"
           >
             <div className="relative">
-              <img
+              <Image
                 src="/profile-pic.png"
                 alt="Ahmad Salamh"
+                width={160}
+                height={160}
+                priority
                 className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-white/20 shadow-2xl object-cover"
               />
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-500/20 to-secondary-500/20"></div>

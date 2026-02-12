@@ -2,6 +2,7 @@
 
 import { motion, useInView, useMotionTemplate, useMotionValue, useScroll, useSpring, useTransform, AnimatePresence } from 'framer-motion'
 import { ArrowRight, CheckCircle2, GraduationCap, Sparkles, Target, Trophy, TrendingUp, User2, Code, Zap, Globe, Award, X, ExternalLink, type LucideIcon } from 'lucide-react'
+import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 type SectionId = 'overview' | 'strengths' | 'impact' | 'education'
@@ -253,7 +254,13 @@ const About = () => {
                 >
                   <motion.div className="absolute inset-0 rounded-2xl opacity-50" style={{ background: glow }} />
                   <div className="overflow-hidden relative rounded-2xl border shadow-2xl transform-gpu border-white/60">
-                    <img src="/profile-pic.png" alt="Ahmad Salamh" className="object-contain w-full h-64" />
+                    <Image
+                      src="/profile-pic.png"
+                      alt="Ahmad Salamh"
+                      width={400}
+                      height={400}
+                      className="object-contain w-full h-64"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-pink-500/10" />
                   </div>
                 </motion.div>

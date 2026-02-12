@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react'
+import Image from 'next/image'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -190,11 +191,13 @@ const Projects = ({ hidePaginationOnMobile = false }: ProjectsProps) => {
                   <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.45),transparent_55%),radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.35),transparent_50%)]" />
                   <div className="flex absolute inset-0 justify-center items-center p-6 md:p-10">
                     {project.image ? (
-                      <div className="p-8 w-full h-full rounded-2xl border shadow-sm backdrop-blur-sm bg-white/75 border-white/40">
-                        <img
+                      <div className="relative w-full h-full rounded-2xl border shadow-sm backdrop-blur-sm bg-white/75 border-white/40">
+                        <Image
                           src={project.image}
                           alt={project.title}
-                          className="object-contain w-full h-full"
+                          fill
+                          className="object-contain p-8"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                       </div>
                     ) : (
@@ -350,11 +353,13 @@ const Projects = ({ hidePaginationOnMobile = false }: ProjectsProps) => {
                           <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.45),transparent_55%),radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.35),transparent_50%)]" />
                           <div className="flex absolute inset-0 justify-center items-center p-6">
                             {project.image ? (
-                              <div className="p-5 w-full h-full rounded-2xl border shadow-sm backdrop-blur-sm bg-white/75 border-white/40">
-                                <img
+                              <div className="relative w-full h-full rounded-2xl border shadow-sm backdrop-blur-sm bg-white/75 border-white/40">
+                                <Image
                                   src={project.image}
                                   alt={project.title}
-                                  className="object-contain w-full h-full"
+                                  fill
+                                  className="object-contain p-5"
+                                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                               </div>
                             ) : (
