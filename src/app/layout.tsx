@@ -6,13 +6,13 @@ import 'swiper/css/pagination'
 
 export const metadata: Metadata = {
   title: 'Ahmad Salamh - Senior Frontend Developer',
-  description: 'Senior Frontend Developer with 5+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript. Focused on SEO and Core Web Vitals.',
+  description: 'Senior Frontend Developer with 6+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript. Focused on SEO and Core Web Vitals.',
   keywords: 'Frontend Developer, JavaScript, React, Vue.js, Next.js, Nuxt.js, TypeScript, Shadcn UI, Tailwind CSS, Redux, Pinia, React Query, GraphQL, Vite, Webpack, PNPM, Web Development, UAE, Saudi Arabia, Europe',
   authors: [{ name: 'Ahmad Salamh' }],
   creator: 'Ahmad Salamh',
   openGraph: {
     title: 'Ahmad Salamh - Senior Frontend Developer',
-    description: 'Senior Frontend Developer with 5+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.',
+    description: 'Senior Frontend Developer with 6+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.',
     url: 'https://my-portfolio-wx43.vercel.app/',
     siteName: 'Ahmad Salamh Portfolio',
     locale: 'en_US',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Ahmad Salamh - Senior Frontend Developer',
-    description: 'Senior Frontend Developer with 5+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.',
+    description: 'Senior Frontend Developer with 6+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.',
     images: ['/profile-pic.png'],
   },
   robots: {
@@ -73,7 +73,7 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Ahmad Salamh",
               "jobTitle": "Senior Frontend Developer",
-              "description": "Senior Frontend Developer with 5+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.",
+              "description": "Senior Frontend Developer with 6+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.",
               "url": "https://my-portfolio-wx43.vercel.app/",
               "sameAs": [
                 "https://github.com/AhmadSalamh",

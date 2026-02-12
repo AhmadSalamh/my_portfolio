@@ -225,7 +225,7 @@ const About = () => {
                     whileHover={{ scale: 1.05 }}
                     className="px-3 py-1 text-xs font-semibold text-white bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg"
                   >
-                    5+ yrs
+                    6+ yrs
                   </motion.div>
                 </div>
 
@@ -391,7 +391,7 @@ const About = () => {
                 <div className="grid gap-6 mt-6 md:grid-cols-2">
                   <div className="space-y-4 text-gray-700">
                     <p className="leading-relaxed">
-                      Senior Frontend Developer with 5+ years of experience building scalable web applications and e-commerce platforms.
+                      Senior Frontend Developer with 6+ years of experience building scalable web applications and e-commerce platforms.
                     </p>
                     <p className="leading-relaxed">
                       Strong engineering background with a focus on performance, accessibility, and business outcomes.

@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Ahmad Salamh - Senior Frontend Developer',
     short_name: 'Ahmad Salamh',
-    description: 'Senior Frontend Developer with 5+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.',
+    description: 'Senior Frontend Developer with 6+ years building high-performance, scalable web apps and e-commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

@@ -125,7 +125,7 @@ const Experience = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mx-auto max-w-3xl text-lg text-gray-600 md:text-xl"
           >
-            5+ years of professional experience building scalable web applications for international clients
+            6+ years of professional experience building scalable web applications for international clients
           </motion.p>
         </div>
 

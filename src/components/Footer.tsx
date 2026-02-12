@@ -73,7 +73,7 @@ const Footer = () => {
               Ahmad <span className="text-primary-400">Salamh</span>
             </h3>
             <p className="leading-relaxed text-gray-400">
-              Senior Frontend Developer with 5+ years building high‑performance, scalable web apps
+              Senior Frontend Developer with 6+ years building high‑performance, scalable web apps
               and e‑commerce platforms. Expert in React, Next.js, Vue.js, Nuxt.js, and TypeScript,
               focused on intuitive UI, SEO, and Core Web Vitals performance.
             </p>

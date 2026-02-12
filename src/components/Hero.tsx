@@ -144,7 +144,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed"
           >
-            Building scalable web applications with modern technologies. Specialized in JavaScript, React.js, Vue.js with 5+ years of proven experience.
+            Building scalable web applications with modern technologies. Specialized in JavaScript, React.js, Vue.js with 6+ years of proven experience.
           </motion.p>
 
           <motion.div
