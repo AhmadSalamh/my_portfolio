@@ -55,6 +55,7 @@ const About = () => {
   const [hoveredStat, setHoveredStat] = useState<number | null>(null)
   const [currentAchievement, setCurrentAchievement] = useState(0)
   const [isAutoPlay, setIsAutoPlay] = useState(true)
+  const [isPageVisible, setIsPageVisible] = useState(true)
 
   useEffect(() => {
     if (educationInView) setActiveSection('education')
@@ -62,6 +63,15 @@ const About = () => {
     else if (strengthsInView) setActiveSection('strengths')
     else if (overviewInView) setActiveSection('overview')
   }, [educationInView, impactInView, strengthsInView, overviewInView])
+
+  useEffect(() => {
+    const handleVisibility = () => {
+      setIsPageVisible(!document.hidden)
+    }
+    handleVisibility()
+    document.addEventListener('visibilitychange', handleVisibility)
+    return () => document.removeEventListener('visibilitychange', handleVisibility)
+  }, [])
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -151,12 +161,12 @@ const About = () => {
 
   // Auto-advance achievements
   useEffect(() => {
-    if (!isAutoPlay) return
+    if (!isAutoPlay || !impactInView || !isPageVisible) return
     const interval = setInterval(() => {
       setCurrentAchievement((prev) => (prev + 1) % achievements.length)
     }, 4000)
     return () => clearInterval(interval)
-  }, [isAutoPlay, achievements.length])
+  }, [isAutoPlay, achievements.length, impactInView, isPageVisible])
 
   return (
     <section

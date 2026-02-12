@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
@@ -20,22 +20,52 @@ const Navigation = () => {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '-50% 0px -50% 0px',
-      threshold: 0
+      rootMargin: '-45% 0px -45% 0px',
+      threshold: [0, 0.25, 0.5, 0.75, 1]
     }
+
+    const visibilityMap = new Map<string, number>()
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(`#${entry.target.id}`)
+        const id = entry.target.id
+        visibilityMap.set(id, entry.isIntersecting ? entry.intersectionRatio : 0)
+      })
+      let bestId = ''
+      let bestRatio = 0
+      visibilityMap.forEach((ratio, id) => {
+        if (ratio > bestRatio) {
+          bestRatio = ratio
+          bestId = id
         }
       })
+      if (bestId) setActiveSection(`#${bestId}`)
     }, observerOptions)
 
-    const sections = document.querySelectorAll('section[id]')
-    sections.forEach((section) => observer.observe(section))
+    const observed = new Set<Element>()
 
-    return () => observer.disconnect()
+    const observeSections = () => {
+      const sections = document.querySelectorAll('section[id]')
+      sections.forEach((section) => {
+        if (!observed.has(section)) {
+          observer.observe(section)
+          observed.add(section)
+        }
+      })
+    }
+
+    observeSections()
+
+    const mutationObserver = new MutationObserver(() => {
+      observeSections()
+    })
+
+    mutationObserver.observe(document.body, { childList: true, subtree: true })
+
+    return () => {
+      mutationObserver.disconnect()
+      observer.disconnect()
+    }
   }, [])
 
   useEffect(() => {
@@ -79,6 +109,7 @@ const Navigation = () => {
   ]
 
   const scrollToSection = (href: string) => {
+    setActiveSection(href)
     const element = document.querySelector(href)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })

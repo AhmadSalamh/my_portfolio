@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowDown, Github, Linkedin, Mail, MapPin } from 'lucide-react'
 import Image from 'next/image'
 import { useEffect, useRef } from 'react'
@@ -22,8 +22,10 @@ const WhatsAppIcon = ({ size = 24, className }: { size?: number; className?: str
 
 const Hero = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const reduceMotion = useReducedMotion()
 
   useEffect(() => {
+    if (reduceMotion) return
     const canvas = canvasRef.current
     if (!canvas) return
 
@@ -42,16 +44,18 @@ const Hero = () => {
       opacity: number
     }> = []
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 30; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.5 + 0.2,
       })
     }
+
+    let animationId: number | null = null
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -69,19 +73,40 @@ const Hero = () => {
         ctx.fill()
       })
 
-      requestAnimationFrame(animate)
+      animationId = window.requestAnimationFrame(animate)
     }
 
-    animate()
+    const start = () => {
+      if (animationId !== null) return
+      animationId = window.requestAnimationFrame(animate)
+    }
+
+    const stop = () => {
+      if (animationId === null) return
+      window.cancelAnimationFrame(animationId)
+      animationId = null
+    }
 
     const handleResize = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
     }
 
+    const handleVisibility = () => {
+      if (document.hidden) stop()
+      else start()
+    }
+
+    start()
+
     window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+    document.addEventListener('visibilitychange', handleVisibility)
+    return () => {
+      stop()
+      window.removeEventListener('resize', handleResize)
+      document.removeEventListener('visibilitychange', handleVisibility)
+    }
+  }, [reduceMotion])
 
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about')
